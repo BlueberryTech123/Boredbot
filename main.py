@@ -1,3 +1,3 @@
 import discord
 
-TOKEN = %2FwZhTvgt&
+TOKEN = 481248549900648468
