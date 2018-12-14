@@ -9,7 +9,8 @@ TOKEN = 'NDgxMjQ4NTQ5OTAwNjQ4NDY4.DvMaVw.cqOcosS9zsuc5cKcXm8Y-KRMfbQ'
 async def on_ready():
     print("Bot online")
 async def on_message(message):
-    if message.author == client.user: return
+    if message.author == client.user:
+        return
     if message.content.startswith(">ping"):
         await client.send_message(message.channel, "Pong!")
     if message.content.startswith(">help"): # --------------------------------------- "ERROR IN CODE"
