@@ -6,6 +6,9 @@ client = discord.Client()
 
 TOKEN = 'NDgxMjQ4NTQ5OTAwNjQ4NDY4.DvMaVw.cqOcosS9zsuc5cKcXm8Y-KRMfbQ'
 @client.event
+async def on_ready():
+    await client.change_presence(game=discord.Game(name="with the >help command!"))
+    print("Playing status...Done")
 async def on_message(message):
     if message.author == client.user:
         return
