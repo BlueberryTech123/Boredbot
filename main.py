@@ -14,10 +14,11 @@ async def on_message(message):
     if message.content.startswith(">help"): # --------------------------------------- "ERROR IN CODE"
         embed = discord.Embed(
             title = "Help",
-            description = ">ping",
+            description = "Help for commands. If you\'re looking for the items, >shop would work",
             colour = discord.Colour.blue()
         )
         embed.set_footer(text="Warning: bot is still WIP")
         embed.set_author(name=embed.author.name, icon_url=embed.author.avatar_url)
+        embed.add_field(name="Information", value="``>help`` ``>ping``", inline=False)
         await client.send_message(message.channel, embed = embed)
 client.run(TOKEN)
