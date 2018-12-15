@@ -18,6 +18,6 @@ async def on_message(message):
             colour = discord.Colour.blue()
         )
         embed.set_footer(text="Warning: bot is still WIP")
-        embed.set_author(name="User request")
+        embed.set_author(name=embed.author.name, icon_url=embed.author.avatar_url)
         await client.send_message(message.channel, embed = embed)
 client.run(TOKEN)
