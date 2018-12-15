@@ -14,7 +14,7 @@ async def on_message(message):
     if message.content.startswith(">help"): # --------------------------------------- "ERROR IN CODE"
         embed = discord.Embed(
             title = "Help",
-            description = "Help for commands. If you\'re looking for the items, >shop would work",
+            description = "Help for commands. If you\'re looking for the items, ``>shop`` would do its job :briefcase:",
             colour = discord.Colour.blue()
         )
         embed.set_footer(text="Warning: bot is still WIP")
