@@ -6,8 +6,6 @@ client = discord.Client()
 
 TOKEN = 'NDgxMjQ4NTQ5OTAwNjQ4NDY4.DvMaVw.cqOcosS9zsuc5cKcXm8Y-KRMfbQ'
 @client.event
-async def on_ready():
-    print("Bot online")
 async def on_message(message):
     if message.author == client.user:
         return
@@ -17,9 +15,9 @@ async def on_message(message):
         embed = discord.Embed(
             title = "Help",
             description = ">ping",
-            colour = discord.colour.blue()
+            colour = discord.Colour.blue()
         )
         embed.set_footer(text="Warning: bot is still WIP")
         embed.set_author(name="User request")
-        await client.say(embed = embed)
+        await client.send_message(message.channel, embed = embed)
 client.run(TOKEN)
