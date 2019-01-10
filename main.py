@@ -4,7 +4,7 @@ import asyncio
 
 client = discord.Client()
 
-TOKEN = 'NDgxMjQ4NTQ5OTAwNjQ4NDY4.DvMaVw.cqOcosS9zsuc5cKcXm8Y-KRMfbQ'
+TOKEN = 'NTMyNjg5MTg3MTkxOTE0NTM4.DxgKmg.MJzJJKo1oMzm7mrNMqifIn4Hf7I'
 
 #async def on_ready():
 #    await client.change_presence(game=discord.Game(name="with the >help command!"))
