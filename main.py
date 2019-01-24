@@ -17,12 +17,18 @@ async def on_message(message):
         await client.send_message(message.channel, "Pong!")
     if message.content.startswith(">help"):
         embed = discord.Embed(
-            title = "Help",
-            description = "Help for commands. If you\'re looking for the items, ``>shop`` would do its job :briefcase:",
-            colour = discord.Colour.blue()
+            description = "Help for commands. Pffffft... OBVIOUSLY :smirk:",
+            colour = discord.Colour.gold()
         )
-        embed.set_footer(text="Warning: bot is still WIP")
-        embed.set_author(name=embed.author.name, icon_url=embed.author.avatar_url)
-        embed.add_field(name="Information", value="``>help`` ``>ping``", inline=False)
+        embed.set_footer(text="You\'re welcome")
+        embed.set_author(name=message.author.name, icon_url=message.author.avatar_url)
+        embed.add_field(name="Information", value="`>botinfo` `>help` `>ping`", inline=False)
         await client.send_message(message.channel, embed = embed)
-client.run("NTMyNjg5MTg3MTkxOTE0NTM4.DxgKmg.MJzJJKo1oMzm7mrNMqifIn4Hf7I")
+    if message.content.startswith(">botinfo"):
+        botinfEmbed = discord.Embed(
+            title = "Bot Info",
+            description = ":robot: Client ID: 532689187191914538\n:timer: Date created: " + str(client.user.created_at) + "\n:snake: Discord.py version: " + discord.__version__,
+            colour = discord.Colour.gold()
+        )
+        await client.send_message(message.channel, embed = botinfEmbed)
+client.run(TOKEN)
