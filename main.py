@@ -4,11 +4,11 @@ import asyncio
 
 client = discord.Client()
 
-TOKEN = 'NTMyNjg5MTg3MTkxOTE0NTM4.DxgKmg.MJzJJKo1oMzm7mrNMqifIn4Hf7I'
-
-#async def on_ready():
-#    await client.change_presence(game=discord.Game(name="with the >help command!"))
-#    print("Playing status...Done")
+TOKEN = "NTMyNjg5MTg3MTkxOTE0NTM4.DxgKmg.MJzJJKo1oMzm7mrNMqifIn4Hf7I"
+@client.event
+async def on_ready():
+    await client.change_presence(game=discord.Game(name="something. I\'m bored..."))
+    print("Playing status...Done")
 @client.event
 async def on_message(message):
     if message.author == client.user:
@@ -25,5 +25,4 @@ async def on_message(message):
         embed.set_author(name=embed.author.name, icon_url=embed.author.avatar_url)
         embed.add_field(name="Information", value="``>help`` ``>ping``", inline=False)
         await client.send_message(message.channel, embed = embed)
-    #await client.process_commands(message)
-client.run(TOKEN)
+client.run("NTMyNjg5MTg3MTkxOTE0NTM4.DxgKmg.MJzJJKo1oMzm7mrNMqifIn4Hf7I")
