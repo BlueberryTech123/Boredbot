@@ -4,7 +4,6 @@ import asyncio
 
 client = discord.Client()
 
-TOKEN = "NTMyNjg5MTg3MTkxOTE0NTM4.DxgKmg.MJzJJKo1oMzm7mrNMqifIn4Hf7I"
 @client.event
 async def on_ready():
     await client.change_presence(game=discord.Game(name="something. I\'m bored..."))
@@ -27,7 +26,7 @@ async def on_message(message):
     if message.content.startswith(">botinfo"):
         botinfEmbed = discord.Embed(
             title = "Bot Info",
-            description = ":robot: Client ID: 532689187191914538\n:timer: Date created: " + str(client.user.created_at) + "\n:snake: Discord.py version: " + discord.__version__,
+            description = ":robot: Client ID: 532689187191914538\n:timer: Date created: " + str(client.user.created_at) + "\n:snake: Discord.py version: " + discord.__version__ + "\n:file_cabinet: Servers: " + str(len(client.servers)),
             colour = discord.Colour.gold()
         )
         await client.send_message(message.channel, embed = botinfEmbed)
