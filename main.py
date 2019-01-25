@@ -30,4 +30,4 @@ async def on_message(message):
             colour = discord.Colour.gold()
         )
         await client.send_message(message.channel, embed = botinfEmbed)
-client.run(TOKEN)
+client.run("NTMyNjg5MTg3MTkxOTE0NTM4.DyveYw.G-aD4V5tyIVQC1gH3pkIGjx3uu8")
